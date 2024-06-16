@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&family=Ubuntu&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+header{
+  background-color: navy;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+nav h1{
+  color: #599205;
+}
+nav ul{
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+}
+nav ul li{
+  list-style-type: none;
+  position: relative;
+}
+
+nav ul li.dropdown:hover > ul{
+  display: block;
+}
+nav ul li a{
+  text-decoration: none;
+  color: #fff;
+}
+nav ul li ul{
+  background-color: navy;
+  background-color: rgb(25, 25, 231);
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  width: 210%;
+  top: 100%;
+}
+nav ul li ul a{
+  display: inline-block;
+  padding: .6rem 1.2rem;
+  width: 100%;
+}
+nav ul li ul a:hover{
+  background-color: #599205;
+}
+
+
+
+
+
+
+
+
+.logo{
+  width: 50px;
+}
+.logo img{
+  width: 100%;
+  border-radius: 25px;
+}
