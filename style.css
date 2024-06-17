@@ -7,6 +7,7 @@
 }
 body{
   font-family: 'Poppins', sans-serif;
+  background-color: #e2e2e2;
 }
 header{
   background-color: navy;
@@ -31,7 +32,6 @@ nav ul li{
   list-style-type: none;
   position: relative;
 }
-
 nav ul li.dropdown:hover > ul{
   display: block;
 }
@@ -56,8 +56,7 @@ nav ul li ul a:hover{
   background-color: #599205;
 }
 
-/** Second drop */
-
+/** SECOND DROP */
 nav ul li ul li ul{
   display: block;
   position: absolute;
@@ -74,29 +73,27 @@ nav ul li ul li.dropdown-two:hover > ul{
 }
 .logo img{
   width: 100%;
-  border-radius: 25px;
+  height: 50px;
+  border-radius: 100%;
 }
 
-body{
-  background-color: #e2e2e2;
-}
 /** GRID LAYOUT */
 .grid-container{
   display: grid;
-  grid-template-columns: 40% 40% 20%;
+  grid-template-columns: 40% 35% 22.5%;
   grid-template-rows: repeat(4, 1fr);
   grid-template-rows: 25% 25% 15% 35%;
   gap: 1rem;
- /*  width: 80%; */
-/*   margin: 0 auto; */
   padding: 1rem;
   grid-template-areas: 
   "post feed-two suggestions"
   "feed-one feed-two suggestions"
   "feed-one feed-two suggestions"
   "feed-one feed-three suggestions";
-  height: 100vh;
+  min-height: 100vh;
 }
+
+/*** POST CONTAINER */
 .grid-container .post{
   grid-area: post;
   background-color: white;
@@ -119,19 +116,107 @@ body{
   padding: .4rem;
   color: white;
 }
+
+/*** FEED ONE CONTAINER */
 .grid-container .feed-one{
   grid-area: feed-one;
-  background-color: bisque;
+  background-color: white;
+  padding: .5rem 1.2rem;
+  position: relative;
 }
+.feed-one .user{
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1.5rem;
+}
+.user .name p{
+  font-size: .8rem;
+  font-weight: 500;
+}
+.feed-one .date{
+  position: absolute;
+  right: 0;
+  font-size: .8rem;
+}
+.content{
+  margin-bottom: 2rem;
+}
+.content .post-img{
+  width: 100%;
+  margin: 1rem 0;
+  border: 1px solid #d6d6d6;
+  padding: 1rem;
+}
+.post-img img{
+  width: 100%;
+  height: 200px;
+}
+.feed-two .post-img img{
+  width: 100%;
+  height: 250px;
+}
+.content .post-img span a{
+  text-decoration: none;
+  font-weight: 600;
+  font-size: .8rem;
+}
+.reactions{
+  position: absolute;
+  bottom: 1rem;
+}
+.reactions .com{
+  margin-left: 1.5rem;
+  color: #2a6aeb;
+  font-weight: 600;
+}
+
+/*** FEED TWO CONTAINER */
 .grid-container .feed-two{
   grid-area: feed-two;
-  background-color: rebeccapurple;
+  background-color: white;
+  position: relative;
 }
+
+/*** FEED THREE CONTAINER */
 .grid-container .feed-three{
   grid-area: feed-three;
-  background-color: teal;
+  background-color: white;
+  position: relative;
 }
+
+/*** SUGGESTIONS CONTAINER */
 .grid-container .suggestions{
   grid-area: suggestions;
-  background-color: gold;
+  background-color: white;
+  padding: .7rem .5rem;
+}
+.suggestions .user{
+  display: flex;
+  position: relative;
+  gap: .5rem;
+  padding: 1.5rem 0;
+}
+.suggestions h2{
+  color: #2a6aeb;
+  font-size: 1.2rem;
+}
+.suggestions .user h3{
+  font-size: 1rem;
+  padding-right: 2rem;
+}
+.suggestions .add{
+  padding: .4rem .7rem;
+  background-color: #2a6aeb;
+  border: none;
+  color: white;
+  border-radius: 25px;
+}
+.suggestions .see{
+  padding: .5rem;
+  width: 100%;
+  background-color: #2a6aeb;
+  border: none;
+  color: white;
 }
