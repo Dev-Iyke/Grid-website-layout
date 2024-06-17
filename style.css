@@ -17,7 +17,7 @@ nav{
   justify-content: space-between;
   width: 80%;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: .5rem;
 }
 nav h1{
   color: #599205;
@@ -41,7 +41,6 @@ nav ul li a{
 }
 nav ul li ul{
   background-color: navy;
-  background-color: rgb(25, 25, 231);
   display: none;
   flex-direction: column;
   position: absolute;
@@ -57,17 +56,64 @@ nav ul li ul a:hover{
   background-color: #599205;
 }
 
+/** Second drop */
 
-
-
-
-
-
-
+nav ul li ul li ul{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  display: none;
+}
+nav ul li ul li.dropdown-two:hover > ul{
+  display: block;
+}
 .logo{
   width: 50px;
 }
 .logo img{
   width: 100%;
   border-radius: 25px;
+}
+
+main{
+  background-color: #e2e2e2;
+}
+/** GRID LAYOUT */
+.grid-container{
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: 15% 25% 15% 25%;
+  gap: 1rem;
+ /*  width: 80%; */
+/*   margin: 0 auto; */
+  padding: 1rem;
+  grid-template-areas: 
+  "post feed-two suggestions"
+  "feed-one feed-two suggestions"
+  "feed-one feed-two suggestions"
+  "feed-one feed-three suggestions";
+  height: 100vh;
+}
+.grid-container .post{
+  grid-area: post;
+  background-color: #599205;
+}
+.grid-container .feed-one{
+  grid-area: feed-one;
+  background-color: bisque;
+}
+.grid-container .feed-two{
+  grid-area: feed-two;
+  background-color: rebeccapurple;
+}
+.grid-container .feed-three{
+  grid-area: feed-three;
+  background-color: teal;
+}
+.grid-container .suggestions{
+  grid-area: suggestions;
+  background-color: gold;
 }
