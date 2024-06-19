@@ -219,7 +219,7 @@ nav ul li ul li.dropdown-two:hover > ul{
   color: white;
 }
 
-@media screen and (max-width:850px){
+@media screen and (max-width:900px){
   body{
     background-color: #333;
   }
