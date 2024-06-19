@@ -21,7 +21,7 @@ nav{
   padding: .5rem;
 }
 nav h1{
-  color: #599205;
+  color: #6aac07;
 }
 nav ul{
   display: flex;
@@ -141,9 +141,6 @@ nav ul li ul li.dropdown-two:hover > ul{
   right: 0;
   font-size: .8rem;
 }
-/* .content{
-  margin-bottom: 1rem;
-} */
 .content .post-img{
   width: 100%;
   margin: 1rem 0 0;
@@ -220,4 +217,39 @@ nav ul li ul li.dropdown-two:hover > ul{
   background-color: #2a6aeb;
   border: none;
   color: white;
+}
+
+@media screen and (max-width:850px){
+  body{
+    background-color: #333;
+  }
+  nav{   
+    width: 60%;
+  }
+  nav ul{
+    display: none;
+  }
+  .grid-container{
+    display: flex;
+    flex-direction: column;
+  }
+  .grid-container .post button{
+      margin-top: 3rem;
+  }
+  .grid-container .feed-one{
+    padding-bottom: 5rem;
+  }
+  .grid-container .suggestions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .suggestions .see{
+    width: 25%;
+    border-radius: .6rem;
+  }
+  .suggestions .user h3{
+    font-size: 1rem;
+    padding-right: 5rem;
+  }
 }
