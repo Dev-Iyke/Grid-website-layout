@@ -9,6 +9,8 @@ body{
   font-family: 'Poppins', sans-serif;
   background-color: #e2e2e2;
 }
+
+/** Header and navbar styles*/
 header{
   background-color: navy;
 }
@@ -57,7 +59,7 @@ nav ul li ul a:hover{
   background-color: #599205;
 }
 
-/** SECOND DROP */
+/** Navbar Second drop */
 nav ul li ul li ul{
   display: block;
   position: absolute;
@@ -78,7 +80,8 @@ nav ul li ul li.dropdown-two:hover > ul{
   border-radius: 100%;
 }
 
-/** GRID LAYOUT */
+
+/** MAIN CONTENT: GRID LAYOUT */
 .grid-container{
   display: grid;
   grid-template-columns: 40% 35% 22.5%;
@@ -154,10 +157,7 @@ nav ul li ul li.dropdown-two:hover > ul{
   width: 100%;
   height: 200px;
 }
-.feed-two .post-img img{
-  width: 100%;
-  height: 250px;
-}
+
 .content .post-img span a{
   text-decoration: none;
   font-weight: 600;
@@ -178,6 +178,10 @@ nav ul li ul li.dropdown-two:hover > ul{
   grid-area: feed-two;
   background-color: white;
   position: relative;
+}
+.feed-two .post-img img{
+  width: 100%;
+  height: 250px;
 }
 
 /*** FEED THREE CONTAINER */
@@ -222,6 +226,8 @@ nav ul li ul li.dropdown-two:hover > ul{
   color: white;
 }
 
+
+/**** Screen width between 0px and 667px */
 @media screen and (max-width:667px){
   body{
     background-color: #333;
@@ -249,8 +255,10 @@ nav ul li ul li.dropdown-two:hover > ul{
     align-items: center;
   }
   .suggestions .see{
+    display: block;
     width: 55%;
     border-radius: .6rem;
+    margin: 0 auto;
   }
   .suggestions .user h3{
     font-size: 1rem;
@@ -258,6 +266,8 @@ nav ul li ul li.dropdown-two:hover > ul{
   }
 }
 
+
+/**** Screen width between 668px and 1200px */
 @media screen and  (min-width: 668px) and (max-width: 1200px){
   nav{   
     width: 90%;
@@ -284,18 +294,31 @@ nav ul li ul li.dropdown-two:hover > ul{
     "suggestions suggestions"
     ;
   }
+  .grid-container .suggestions{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
   .grid-container .suggestions .sug-wrap{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: .6rem;
+    gap: 1rem;
   }
   .suggestions .user{
     display: flex;
     position: relative;
-    padding: .5rem 0;
+    padding: 1.5rem 0;
   }
   .suggestions .user h3{
     font-size: 1rem;
     padding-right: 1rem;
   }
+  .suggestions .see{
+    display: block;
+    width: 25%;
+    border-radius: .6rem;
+    margin: 0 auto;
+  }
+  
 }
